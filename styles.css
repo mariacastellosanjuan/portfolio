@@ -39,6 +39,7 @@ body {
     margin: 0;
     padding: 0;
     scrollbar-width: none;
+    overflow: hidden;
 }
 
 a {
@@ -67,12 +68,7 @@ a {
 
 
 #reach-out {
-    position: absolute;
-    left: 30;
-    bottom: 0;
 
-    transform: translate(0%, 65%);
-    /*Change this value to show more!!!*/
 
     transition: transform 0.3s ease;
     background-color: white;
@@ -82,7 +78,6 @@ a {
 
     border: 3px solid rgb(243, 239, 235);
 
-    max-width: 15%;
 }
 
 #reach-out:hover {
@@ -94,6 +89,39 @@ a {
     font-size: 22px;
     margin: 10px 0;
 }
+
+
+
+/* Styles for mobile devices */
+@media only screen and (max-width: 768px) {
+    #reach-out {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 65%);
+        max-width: 80%
+    }
+
+    #reach-out:hover {
+        transform: translate(-50%, 0%);
+    }
+}
+
+/* Styles for desktop devices */
+@media only screen and (min-width: 769px) {
+    #reach-out {
+        position: absolute;
+        left: 30;
+        bottom: 0;
+        transform: translate(0%, 65%);
+        max-width: 250px;
+    }
+
+    #reach-out:hover {
+        transform: translate(0%, 0%);
+    }
+}
+
 
 
 #email {
